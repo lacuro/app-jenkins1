@@ -8,6 +8,7 @@ pipeline {
     }
 
     stage('Test2') {
+      agent any
       post {
         always {
           sh 'docker container stop app'
